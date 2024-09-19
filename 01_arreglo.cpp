@@ -55,6 +55,20 @@ int main(){
 	for(int i = 0; i < 4; i++)
 		cout << arreglo5[i] << endl;
 	
+	//conocer donde comienza y donde termina una variable:
+	//no olvide colocar el parametro -std=c++11 en la opciones del compilador
+	cout << "inicio de arreglo5: " << begin(arreglo5) << endl;
+	cout << "final de arreglo5: " << end(arreglo5) << endl;
+	
+	//conocer el tamaño de un arreglo:
+	cout << "cantidad de items en arreglo5: " << end(arreglo5)-begin(arreglo5) << endl;
+	
+	double arregloNumeros[] = {3.4, 5.1, 7.8, 1.111, 5.564, 123.45, 5.895, 777, 123.56};
+	//imprimir el arreglo:
+	cout << "*************************" << endl;
+	for( int i = 0; i < end(arregloNumeros)-begin(arregloNumeros); i++ )
+		cout << arregloNumeros[i] << endl;
+	
 	return 123;
 }
 
