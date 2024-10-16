@@ -1,0 +1,4 @@
+Hola Gerardo
+4
+El valor de a es 3.1416
+Melon	Sandia	Uva	Naranja
