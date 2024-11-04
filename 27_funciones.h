@@ -5,6 +5,7 @@
 						  //nos incluya las constantes matematicas
 						  //como por ejemplo PI, o logaritmos naturales
 #include<cmath>
+#include<algorithm>
 using namespace std;
 /*1. Escriba una funcion llamada elevar que reciba dos numeros enteros,
 	uno para la base y otro para la potencia, la funcion debe retornar un entero
@@ -91,6 +92,66 @@ float minimo(float a, float b, float c){
 	double x = a, y = b, z = c;
 	return minimo(x,y,z);
 }
+/*7. Escriba una funcion que devuelva true si una cadena
+de texto esta escrita toda en mayusculas y false si no es así.*/
+bool todoMayusculas(string str){
+	//comparar a str con una copia de str que este en mayusculas
+	string copia = str;
+	transform(copia.begin(), copia.end(), copia.begin(), ::toupper);
+	//forma 1: forma tradicional
+	/*if( str == copia )
+		return true;
+	else
+		return false;*/
+	
+	//forma 2: usando el operador ternario
+	return ( str == copia ? true : false );
+}
+/*8. Escriba una funcion a la cual se le proporcione como
+parametros un caracter y una cadena de texto, dicha funcion
+debera devolver un entero con la posicion de la primer coincidencia
+en la que fue encontrado el caracter proporcionado dentro de
+la cadena de texto proporcionada, si el caracter no es
+encontrado entonces devolver -1.
+No tiene permitido utilizar la funcion find del string.*/
+int encontrar(char buscado, string cadena){
+	for( int i = 0; i < cadena.length(); i++ ){
+		if( cadena[i] == buscado )
+			return i; //return de la posicion donde encontramos el char buscado
+			//no es necesario colocar break para terminar con for
+			//porque return termina con la funcion y con cualquier
+			//estructura de repeticion dentro de ella.
+	}
+	//si llego hasta aqui quiere decir que no encontró nada
+	return -1;
+}
+
+/*9. Escriba una funcion que reciba como parametros un string y un
+arreglo de string, dicha funcion debera buscar el string proporcionado
+dentro arreglo, si la cadena es encontrada entonces la funcion
+retornara un numero entero con la posicion de la primer
+coincidencia en la que se encontró, si no se encuentra
+nada entonces retornar -1*/
+int buscarDentroDeArreglo(string buscar, string arreglo[], int tamanoArreglo){
+	//cuando se pasa un arreglo como parametro de una funcion, ya no es
+	//posible obtener su tamaño por medio de end() y begin()
+	//puesto que ya no nos da acceso a sus direcciones de memoria
+	//cout << end(arreglo)-begin(arreglo) << endl;
+	//tampoco se puede usando alternativos como sizeof
+	//cout << sizeof(arreglo)/sizeof(arreglo[0]) << endl;
+	//por lo tanto solo nos queda pedir el tamaño del arreglo como un tercer param.
+	for( int i = 0; i < tamanoArreglo; i++ ){
+		if( arreglo[i] == buscar )
+			return i;  //retornar la posicion donde se encontro
+	}
+	//si llego aqui entonces no encontro nada:
+	return -1;
+}
+
+
+
+
+
 
 
 

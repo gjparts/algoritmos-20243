@@ -30,6 +30,21 @@ int main(){
  	cout << minimo(5.8f, 4.5655f, 9.999f) << endl; //prueba con float
  	cout << minimo(5, 4, 9) << endl; //prueba con int
  	
+ 	cout << todoMayusculas("gato blanco") << endl;
+ 	cout << todoMayusculas("GATO BLANCO") << endl;
+ 	cout << todoMayusculas("gATo BLanCO") << endl;
+ 	
+ 	cout << encontrar('h',"UNAH") << endl;
+ 	cout << encontrar('H',"UNAH") << endl;
+ 	cout << encontrar('a',"mandarina") << endl;
+ 	
+ 	cout << "******************" << endl;
+ 	string frutas[] = {"pera","uva","manzana","sandia","mandarina"};
+ 	cout << buscarDentroDeArreglo("uva",frutas,end(frutas)-begin(frutas)) << endl;
+ 	cout << buscarDentroDeArreglo("kiwi",frutas,end(frutas)-begin(frutas)) << endl;
+ 	cout << buscarDentroDeArreglo("MANDARINa",frutas,end(frutas)-begin(frutas)) << endl;
+ 	cout << buscarDentroDeArreglo("mandarina",frutas,end(frutas)-begin(frutas)) << endl;
+ 	
 	return 789;
 }
 
