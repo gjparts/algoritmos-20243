@@ -14,3 +14,21 @@ void elevar(double *base, double exponente){
 	//no es necesario apuntarlo.
 	*base = pow(*base,exponente);
 }
+/*Hacer una funcion void que mediante
+apuntadores divida a la mitad el numero
+que le enviemos como parametro.
+Dicha funcion debe soportar solo float.*/
+void mitad(float *numero){
+	*numero = *numero/2;
+}
+/*hacer una funcion void que mediante apuntadores
+eleve al cubo un numero entero enviado como parametro.
+-> Sin usar pow.*/
+void cubo(int *numero){
+	*numero = *numero * *numero * *numero;
+}
+
+
+
+
+

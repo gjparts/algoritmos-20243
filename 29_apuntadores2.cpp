@@ -8,5 +8,13 @@ int main(){
 	elevar(&n,3);
 	cout << "n despues de elevar: " << n << endl;
 	
+	float num = 7;
+	mitad(&num);
+	cout << num << endl;
+	
+	int x = 4;
+	cubo(&x);
+	cout << x << endl;
+	
 	return 654;
 }
