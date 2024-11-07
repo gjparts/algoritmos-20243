@@ -16,6 +16,15 @@ int main(){
 	arregloMitad(valores,end(valores)-begin(valores)); //regla 4
 	imprimirArreglo(valores,end(valores)-begin(valores));
 	
+	double cifras[] = {5, 7, 12, 9, 8, 3, 20};
+	imprimirArreglo(cifras,end(cifras)-begin(cifras));
+	arregloCuadrado(cifras,end(cifras)-begin(cifras));
+	imprimirArreglo(cifras,end(cifras)-begin(cifras));
+	
+	int enteros[10];
+	llenarArregloAzar(enteros,end(enteros)-begin(enteros),7,23);
+	imprimirArreglo(enteros,end(enteros)-begin(enteros));
+	
 	return 765;
 }
 

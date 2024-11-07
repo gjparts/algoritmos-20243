@@ -1,5 +1,8 @@
 //archivo de funciones
 #include<iostream>
+#include<cmath>
+#include<ctime>
+#include<stdexcept>
 using namespace std;
 
 /*Hacer tres funciones que reciban como parametros un arreglo
@@ -45,8 +48,30 @@ void arregloMitad(double *arreglo /*regla 2*/, int tamanoArreglo){
    el signo de ampersand (&) ya que un arreglo es por naturaleza un
    apuntador de memoria.*/
 
+/*Hacer una funcion void que le enviemos un arreglo apuntado
+de numeros double y que le altere todos sus elementos
+elevando cada uno de ellos al cuadrado.
+desde el main: imprimir el arreglo antes y despues
+de aplicarle la funcion*/
+void arregloCuadrado(double *arreglo, int tamanoArreglo){
+	for( int i = 0; i < tamanoArreglo; i++ )
+		arreglo[i] = arreglo[i]*arreglo[i];
+}
 
-
+/*hacer una funcion void que llene todos los elementos de un
+arreglo apuntado de numeros enteros con numeros al azar
+entre un valor minimo y un valor maximo todos proporcionados
+como parametros de la funcion.
+IMPORTANTE: el valor minimo no debe superar al valor maximo.*/
+void llenarArregloAzar(int *arreglo, int tamanoArreglo, int minimo, int maximo){
+	//guard clause
+	if( minimo > maximo )
+		throw invalid_argument("minimo no debe de superar a maximo");
+		
+	srand(time(NULL));
+	for( int i = 0; i < tamanoArreglo; i++ )
+		arreglo[i] = rand()%(maximo-minimo+1)+minimo;
+}
 
 
 
