@@ -37,6 +37,22 @@ int main(){
 	cout << "genero: " << p1->genero << endl;
 	cout << "DNI: " << p1->dni << endl;
 	
+	//construiremos a p2 usando el constr. con 2 param.
+	Persona *p2 = new Persona("Irene",41);
+	cout << "Valores default de p2: *************" << endl;
+	cout << "nombre: " << p2->nombre << endl;
+	cout << "edad: " << p2->edad << endl;
+	cout << "genero: " << p2->genero << endl;
+	cout << "DNI: " << p2->dni << endl;
+	
+	//construir otra persona
+	Persona *p3 = new Persona("Viena",16,'F',1234123412345);
+	cout << "Valores default de p3: *************" << endl;
+	cout << "nombre: " << p3->nombre << endl;
+	cout << "edad: " << p3->edad << endl;
+	cout << "genero: " << p3->genero << endl;
+	cout << "DNI: " << p3->dni << endl;
+	
 	return 777;
 }
 
