@@ -53,6 +53,22 @@ int main(){
 	cout << "genero: " << p3->genero << endl;
 	cout << "DNI: " << p3->dni << endl;
 	
+	//prueba de metodos
+	p1->saludar();
+	p2->saludar();
+	p3->saludar();
+	
+	p1->imprimir();
+	p2->imprimir();
+	p3->imprimir();
+	
+	//metodos que hacen return:
+	cout << "edad de p1: " << p1->getEdad() << endl;;
+	
+	cout << "genero descrito de p1: " << p1->getGeneroDescripcion() << endl;
+	cout << "genero descrito de p2: " << p2->getGeneroDescripcion() << endl;
+	cout << "genero descrito de p3: " << p3->getGeneroDescripcion() << endl;
+	
 	return 777;
 }
 

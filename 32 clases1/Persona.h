@@ -51,6 +51,35 @@ class Persona{
 			this->genero = genero;
 			this->dni = dni;
 		}
+		//metodos
+		void saludar(){
+			cout << "Hola me llamo " << this->nombre << " mi edad es " << this->edad << endl;
+		}
+		int getEdad(){
+			return this->edad;
+		}
+		void imprimir(){
+			cout << "********* Perfil de Persona *********" << endl;
+			cout << "Nombre: " << this->nombre << endl;
+			cout << "Edad: " << this->edad << endl;
+			cout << "Genero: " << this->genero << endl;
+			cout << "DNI: " << this->dni << endl;
+			cout << "*************************************" << endl;
+		}
+		/*hacer un metodo que devuelva un string de acuerdo al valor almacenado
+		en el atributo genero, el string a retornar sera el siguiente:
+		si genero es M entonces retornar Masculino
+		si genero es F entonces retornar Femenino
+		si genero es X entonces retornar Otros
+		si genero no es ninguno de los anteriores entonces retornar: Desconocido*/
+		string getGeneroDescripcion(){
+			if( this->genero == 'M' ) return "Masculino";
+			if( this->genero == 'F' ) return "Femenino";
+			if( this->genero == 'X' ) return "Otros";
+			//si llego hasta aqui es porque no era M F X
+			return "Desconocido";
+		}
+		
 }; //este punto y coma es importante!
 
 #endif
