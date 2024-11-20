@@ -8,6 +8,8 @@
    creado en el paso 1 y hacer el include de dicho archivo .h en main.cpp*/
 #include<iostream>
 #include "Persona.h"
+#include "Mascota.h"
+#include "Carro.h"
 using namespace std;
 
 int main(){
@@ -69,8 +71,34 @@ int main(){
 	cout << "genero descrito de p2: " << p2->getGeneroDescripcion() << endl;
 	cout << "genero descrito de p3: " << p3->getGeneroDescripcion() << endl;
 	
+	//crear objetos de clase Mascota
+	Mascota *m1 = new Mascota();
+	m1->imprimir();
+	Mascota *m2 = new Mascota("Mandarino","Gato",3);
+	m2->imprimir();
+	Mascota *m3 = new Mascota("Rambo","Perro",2,'M',true);
+	m3->imprimir();
+	
+	//crear objetos de clade Carro
+	Carro *c1 = new Carro("Toyota","Corolla","Negro",2012);
+	//anio no es accesible desde fuera de forma convencional, porque es private:
+	//c1->anio = -999;
+	//cout << c1->anio << endl;
+	
+	c1->setAnio(1995);
+	//manana vemos el get y la vulnerabilidad en el constructor
+	
+	c1->imprimir();
+	
 	return 777;
 }
+
+
+
+
+
+
+
 
 
 
