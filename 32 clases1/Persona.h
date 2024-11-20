@@ -62,7 +62,8 @@ class Persona{
 			cout << "********* Perfil de Persona *********" << endl;
 			cout << "Nombre: " << this->nombre << endl;
 			cout << "Edad: " << this->edad << endl;
-			cout << "Genero: " << this->genero << endl;
+			//se puede mandar a llamar metodos de la clase actual:
+			cout << "Genero: " << this->getGeneroDescripcion() << endl;
 			cout << "DNI: " << this->dni << endl;
 			cout << "*************************************" << endl;
 		}
