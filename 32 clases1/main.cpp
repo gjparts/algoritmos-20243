@@ -85,8 +85,11 @@ int main(){
 	//c1->anio = -999;
 	//cout << c1->anio << endl;
 	
-	c1->setAnio(1995);
-	//manana vemos el get y la vulnerabilidad en el constructor
+	//escribir el anio por medio del metodo set:
+	c1->setAnio(2024);
+	//leer el anio por medio del metodo get:
+	cout << c1->getAnio() << endl;
+	
 	
 	c1->imprimir();
 	

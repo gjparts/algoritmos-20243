@@ -22,7 +22,9 @@ class Carro{
 			this->marca = marca;
 			this->modelo = modelo;
 			this->color = color;
-			this->anio = anio;
+			//desde el constructor, si un atributo tiene metodo set
+			//que aplica reglas entonces debe usarse aqui tambien:
+			this->setAnio(anio);
 		}
 		//metodos
 		void imprimir(){
@@ -46,7 +48,12 @@ class Carro{
 			else
 				throw invalid_argument("anio debe ser un numero mayor a 2000");
 		}
-		
+		/*para poder leer el valor de un atributo privado desde afuera de la clase
+		usaremos un metodo get, este tipo de metodos deben tener el mismo
+		tipo de dato que el atributo en cuestion.*/
+		int getAnio(){
+			return this->anio;
+		}
 };
 
 #endif
