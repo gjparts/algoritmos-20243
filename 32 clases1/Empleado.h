@@ -51,6 +51,12 @@ class Empleado{
 		char getGenero(){
 			return this->genero;
 		}
+		string getGeneroDescripcion(){
+			if( this->genero == 'M' ) return "Masculino";
+			if( this->genero == 'F' ) return "Femenino";
+			if( this->genero == 'X' ) return "Otros";
+			return "No configurado";
+		}
 		void setTipoContrato(char tipoContrato){
 			if( tipoContrato == 'T' || tipoContrato == 'P' )
 				this->tipoContrato = tipoContrato; //se acepta
@@ -59,6 +65,19 @@ class Empleado{
 		}
 		char getTipoContrato(){
 			return this->tipoContrato;
+		}
+		string getTipoContratoDescripcion(){
+			if( this->tipoContrato == 'T' ) return "Temporal";
+			if( this->tipoContrato == 'P' ) return "Permanente";
+			return "No configurado";
+		}
+		void imprimir(){
+			cout << "***** Perfil de Empleado *****" << endl;
+			cout << "Nombre: " << this->nombre << endl;
+			cout << "Edad: " << this->edad << endl;
+			cout << "Genero: " << this->getGeneroDescripcion() << endl;
+			cout << "Salario: " << this->salario << endl;
+			cout << "Tipo de Contrato: " << this->getTipoContratoDescripcion() << endl;
 		}
 };
 

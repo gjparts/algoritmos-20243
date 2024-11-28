@@ -10,6 +10,7 @@
 #include "Persona.h"
 #include "Mascota.h"
 #include "Carro.h"
+#include "Empleado.h"
 using namespace std;
 
 int main(){
@@ -92,6 +93,9 @@ int main(){
 	
 	
 	c1->imprimir();
+	
+	Empleado *em1 = new Empleado("Gerardo",42,10000,'M','T');
+	em1->imprimir();
 	
 	return 777;
 }
