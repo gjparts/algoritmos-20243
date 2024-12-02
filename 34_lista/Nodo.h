@@ -8,10 +8,10 @@ class Nodo{
 	private:
 	public:
 		//atributos
-		int value;
+		string value;
 		Nodo *next;
 		//constructor
-		Nodo(int value){
+		Nodo(string value){
 			this->value = value;
 			//el Nodo siguiente de un nuevo Nodo
 			//siempre apunta a NULL

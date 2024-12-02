@@ -29,7 +29,7 @@ class ListaSimple{
 			return this->last;
 		}
 		//metodo para agregar un Nodo al final de la lista
-		void push(int value){
+		void push(string value){
 			//1) crear Nodo tmp
 			Nodo *tmp = new Nodo(value);
 			//2) evaluar:
@@ -89,7 +89,7 @@ class ListaSimple{
 			}
 		}
 		//metodo para reemplazar el valor de un Nodo en determinada posicion
-		void set(int pos, int value){
+		void set(int pos, string value){
 			//reutilizamos el metodo get
 			//obtenemos el Nodo en la posicion solicitada y le cambiamos su value
 			//por el value enviado en el metodo set
@@ -139,15 +139,7 @@ class ListaSimple{
 		//metodo find: va a devolver la posicion de la primera coincidencia
 		//encontrada para un value dentro de los Nodos de la lista
 		//si no encuentra nada; entonces va a devolver -1
-		int find(int value){
-			//lo siguiente es infeciente: (se explico en el aula porque)
-			/*
-			for( int i = 0; i < this->length; i++ ){
-				if( this->get(i)->value == value )
-					return i;
-			}
-			*/
-			
+		int find(string value){
 			//algoritmo de recorrido (mas eficiente)
 			Nodo *tmp = this->first; //iniciar el primer nodo
 			//contador de saltos
