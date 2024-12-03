@@ -124,8 +124,11 @@ class ListaSimple{
 				//3) el next de antes apuntara al next de tmp
 				antes->next = tmp->next;
 				//4) si tmp es igual a last entonces last apuntara a antes
-				if( tmp == this->last )
+				if( tmp == this->last ){
 					this->last = antes;
+					//next de last siempre apunta a null
+					this->last->next = NULL;
+				}
 				//5) el next de tmp apuntara a null (para desconectarlo de la lista)
 				tmp->next = NULL;
 				//6) restar 1 a length
