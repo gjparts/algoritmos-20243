@@ -55,25 +55,18 @@ int main(){
 	l1->print();
 	
 	//encontrar un valor en la lista
-	l1->push("4");
-	l1->push("5");
-	l1->push("7");
-	l1->push("1");
-	l1->push("1");
-	l1->push("1");
-	l1->push("5");
-	l1->push("5");
-	l1->push("2");
-	l1->push("5");
-	l1->push("9");
-	l1->push("3");
-	l1->push("8");
-	l1->push("1");
+	l1->push("perro");
+	l1->push("gato");
+	l1->push("loro");
+	l1->push("gallina");
+	l1->push("cocodrilo");
+	l1->push("hipopotamo");
 	l1->print();
-	cout << "7 esta en la posicion: " << l1->find("7") << endl;
-	cout << "1 esta en la posicion: " << l1->find("1") << endl;
-	cout << "8 esta en la posicion: " << l1->find("8") << endl;
-	cout << "4 esta en la posicion: " << l1->find("4") << endl;
+	
+	cout << "loro esta en la posicion: " << l1->find("loro") << endl;
+	cout << "GATO esta en la posicion: " << l1->find("GATO") << endl;
+	cout << "perro esta en la posicion: " << l1->find("perro") << endl;
+	cout << "avestruz esta en la posicion: " << l1->find("avestruz") << endl;
 	
 	return 456;
 }
